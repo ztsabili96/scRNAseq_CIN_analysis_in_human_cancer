@@ -6,6 +6,9 @@ This repository contains an R-based pipeline for inferring large-scale copy numb
 at the single-cell level.
 The workflow is intentionally kept modular and reproducible, following common
 practices in single-cell cancer genomics analyses of chromosomal instability.
+The goal of this project is to explore how chromosomal instability–related
+copy-number patterns can be inferred from scRNA-seq data and summarized
+at the single-cell level in a reproducible analysis workflow.
 
 ## Project overview
 - CNV inference using copyKAT
@@ -48,7 +51,7 @@ diploid (reference cells).
 
 Finally, copyKAT CNV profiles were integrated with per-cell metadata to compute
 a Chromosomal Instability (CIN) score for each cell. CIN score distributions were
-visualized and compared between aneuploid and diploid populations.
+visualized and exploratorily compared between aneuploid and diploid populations.
 
 ## Results
 
@@ -73,8 +76,9 @@ to remove low-quality cells and potential technical artifacts.
 Chromosomal instability was quantified at the single-cell level as the mean absolute
 deviation of inferred copy number values from the diploid state.
 
-As expected, aneuploid cells show higher CIN scores compared to diploid cells,
-consistent with increased chromosomal instability in cancer.
+Consistent with expectations, cells classified as aneuploid by copyKAT
+exhibit higher CIN scores compared to diploid cells, reflecting increased
+large-scale chromosomal variability in putative tumor populations.
 
 <img src="figures/CIN_score_boxplot.png" width="650">
 
